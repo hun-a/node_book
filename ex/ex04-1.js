@@ -1,6 +1,6 @@
 const fs = require('fs');
 const readline = require('readline');
-const filepath = './ex/ch04_input.txt';
+const filepath = './ex/ch04-1_input.txt';
 
 const input = fs.createReadStream(filepath);
 
