@@ -22,6 +22,10 @@ app.post('/process/login', (req, res, next) => {
   res.end();
 });
 
+app.all('*', (req, res) => {
+  res.status(404).send(`<h1>ERROR - ${req.url} is not found.</h1>`);
+});
+
 http.createServer(app).listen(app.get('port'), () => {
   console.log(`Express server is running ${app.get('port')}`);
 });
